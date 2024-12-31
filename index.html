@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susan Kare, pionnière du design numérique</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<style> 
+body {
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+}
+
+header {
+    z-index: 10; /* Priorité menu */
+    position: relative; 
+}
+
+.landing-page {
+    z-index: 5; 
+    left: 0;
+    height: 100%;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+    position: absolute; 
+    top: 0;
+    text-align: justify;
+}
+
+.top-page {
+    height: 100vh;
+    background-image: url("images/SK_noir.jpg");
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.horizontal-menu {
+    list-style: none; 
+    display: flex; 
+    justify-content: center; 
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-menu li {
+    margin: 0 15px; 
+}
+
+.horizontal-menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+}
+
+.big-title {
+    font-size: 4vw; 
+    color: rgb(255, 255, 255); 
+    font-family: 'Playfair Display', serif;}
+
+#accueil {
+    padding-top: 50px; 
+    text-align: center; 
+    margin: 0 auto; 
+    max-width: 800px;
+    color: #000;
+    font-family: 'Playfair Display', serif;
+}
+
+
+#accueil h2 {
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+}
+
+#accueil p {
+    font-size: 1.2rem; 
+    line-height: 1.8; 
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+}
+
+.fresque {
+    width: 100%; 
+    height: 170px;
+    background-image: url('Images/SK_fresque.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin: 30px 0; 
+}
+
+#biographie {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+
+}
+
+#biographie h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.biography-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    background-color: #f9f9f9;
+}
+
+.biography-container p {
+    flex: 1;
+    margin: 0;
+    padding-right: 10px; 
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+}
+
+.biography-container img {
+    flex: 0 0 300px; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#travaux {
+    padding: 20px;
+}
+
+#travaux h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+#travaux p {
+    text-align: left;
+    max-width: 80%; 
+    margin: 0 auto; 
+    line-height: 1.6;
+    font-size: 1.1rem;
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+}
+
+/* Au cas ou */
+#travaux p {
+    margin-left: 10%;  
+    margin-right: 10%; 
+}
+
+ #galerie {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .galerie-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .carte {
+        width: 280px;
+        padding: 15px;
+        text-align: center;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .carte h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .carte p {
+        font-size: 0.95rem;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .image-oeuvre {
+        width: 100%;
+        height: auto;
+        max-width: 90%;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+
+    .carte p strong {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    #galerie h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    #galerie p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+#a-propos {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+}
+
+#a-propos h2 {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+#a-propos p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#a-propos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#a-propos ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-family: 'Playfair Display', serif;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    color: #00b140;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #00b140;
+}
+
+footer input[type="email"] {
+    padding: 10px;
+    width: calc(100% - 120px);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+footer button {
+    background-color: #00b140;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+    background-color: #007f30;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #00b140;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid #444;
+    margin: 20px 0;
+}
+
+
+</style>
+
+
+<body>
+    <section class="top-page">
+        <header class="header">
+
+            <nav class="nav">
+                <ul class="horizontal-menu">
+                    <li><a href="#biographie">Biographie</a></li>
+                    <li><a href="#travaux">Travaux & Publications</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                    <li><a href="#a-propos">À propos</a></li>
+                  </ul>
+            </nav>
+        </header>
+        <div class="landing-page">
+            <h1 class="big-title">Susan Kare, pionnière du design numérique</h1>
+        </div>
+    </section>
+
+
+    <section id="accueil">
+        <h2>Bienvenue !</h2>
+        <p>Bienvenue dans cet espace dédié à l’une des figures les plus marquantes du design numérique: Susan Kare. Si vous avez déjà utilisé un ordinateur Apple ou joué au Solitaire sur Windows, vous avez probablement croisé l’une de ses créations sans même le savoir.
+
+            Actrice majeure du design de l'information, Susan Kare a révolutionné notre façon d’interagir avec les ordinateurs en concevant des icônes et polices emblématiques qui allient simplicité, clarté et esthétisme. Mais son travail va bien au-delà des écrans. Artiste accomplie, son influence se ressent aussi dans l’univers de l’art contemporain et du design graphique.
+            
+            Découvrez au fil de ce site son parcours exceptionnel, ses œuvres majeures et l’impact indéniable qu’elle a eu sur le design et la technologie. Plongez dans son univers, où chaque pixel raconte une histoire et où la créativité dialogue avec la fonctionnalité.</p>
+    </section>
+
+<div class="fresque"></div>
+
+
+<section id="biographie">
+    <h2>Biographie</h2>
+    <div class="biography-container">
+        <p>
+            Susan Kare est née le 5 février 1954 à Ithaca, aux États-Unis. Diplômée en beaux-arts, elle obtient un doctorat à l’Université de New York en 1978 avant de s’installer à San Francisco, où elle entame une carrière dans le domaine artistique en travaillant au musée des beaux-arts de la ville.
+            <br><br>
+            C’est en 1982 que sa carrière prend un tournant décisif lorsqu’elle rejoint l’équipe d’Apple grâce à Andy Hertzfeld, l’un de ses anciens camarades de lycée et membre du projet Macintosh. Embauchée comme graphiste d’interface humaine, elle se retrouve face à un défi colossal : donner un visage au premier Macintosh, une machine conçue pour démocratiser l’informatique.
+            <br><br>
+            Après Apple, elle continue d’exercer son talent chez NeXT, Microsoft et IBM, créant des œuvres aussi emblématiques que le graphisme du Solitaire Windows ou les icônes du système Windows 3.0. Toujours active, elle dirige aujourd’hui son propre studio à San Francisco, tout en continuant de collaborer avec de grandes entreprises et en produisant des œuvres d’art en édition limitée.
+        </p>
+        <img src="Images/SK_susan.jpg" alt="Photo de Susan Kare">
+    </div>
+</section>
+
+
+<section id="travaux">
+    <h2>Travaux & Publications</h2>
+    <p>L'approche unique du design par Susan Kare a marqué chaque étape de son parcours.</p>
+   
+    <br>
+
+    <p><strong>Contributions à Apple:</strong></p>
+    <p>Lorsqu’elle intègre Apple, Susan Kare ne conçoit pas seulement des images pour embellir une interface : elle crée un véritable langage visuel, pensé pour rendre les ordinateurs intuitifs. Le Macintosh original était une machine révolutionnaire, mais sans ses icônes, il aurait été difficile pour les utilisateurs de s’y retrouver.</p>
+
+    <p>Ses créations, comme l’icône "Happy Mac", accueillaient les utilisateurs avec un sourire chaleureux dès l’allumage de leur ordinateur. Le "Paint Bucket", la corbeille et la bombe signalant une erreur système sont d’autres exemples d’éléments graphiques qui traduisent une réflexion sur l’expérience utilisateur.</p>
+
+    <p>Kare a également joué un rôle majeur dans la conception des premières polices bitmap, dont Chicago, qui deviendra la police par défaut du Macintosh et sera reprise pour les premiers iPods. Cette police a défini l’identité visuelle d’Apple dans les années 1980 et 1990.</p>
+
+    <br>
+
+    <p><strong>Travaux pour Microsoft:</strong></p>
+    <p>Après son passage chez Apple, Susan Kare rejoint Microsoft où elle apporte sa touche unique à l’environnement Windows. C’est notamment elle qui conçoit les graphismes du célèbre jeu Solitaire qui reste encore aujourd'hui gravé dans la mémoire de nombreux utilisateurs.</p>
+
+    <p>Elle participe aussi à la création d’icônes pour Windows 3.0. Son style, toujours minimaliste mais chargé de sens, permet de rendre les interfaces plus intuitives, même pour les novices.</p>
+
+    <br>
+
+    <p><strong>Explorations contemporaines:</strong></p>
+    <p>Susan Kare n’a jamais cessé de repousser les limites du design. En tant qu’artiste indépendante, elle travaille aujourd’hui avec des entreprises comme Pinterest, Facebook, et des startups émergentes. Son rôle dépasse alors la simple création d’icônes : elle participe à la définition d’identités visuelles globales, en accord avec les valeurs et la mission de chaque entreprise.</p>
+
+    <p>Parallèlement, son travail a été reconnu par le monde de l’art. Ses croquis originaux et ses prototypes sont exposés dans des institutions prestigieuses telles que le Museum of Modern Art à New York, qui a acquis plusieurs de ses œuvres pour sa collection permanente.</p>
+
+    <br>
+
+    <p><strong>Héritage artistique et influence durable</strong></p>
+    <p>Le style de Susan Kare a façonné une génération entière de designers. Ses créations, inspirées des contraintes techniques des années 1980 (comme le pixel art), continuent d’influencer le design contemporain, où simplicité et accessibilité sont des priorités.</p>
+
+    <p>Son œuvre illustre parfaitement la manière dont l’art et la technologie peuvent se rencontrer pour produire des interfaces toutes aussi fonctionnelles qu'accueillantes.</p>
+</section>
+
+</section>
+
+    
+</section>
+
+
+<section id="galerie" style="text-align: center; margin-top: 50px;">
+    <h2>Galerie des oeuvres de Susan Kare</h2>
+    <p>Explorez les créations les plus célèbres de Susan Kare.</p>
+    
+    <div class="galerie-container">
+        
+        <div class="carte">
+            <h3>Icônes du Macintosh (1984)</h3>
+            <img src="Images/SK_macintosh.png" alt="Icônes du Macintosh" class="image-oeuvre">
+            <p><strong>Entreprise :</strong> Apple</p>
+            <p>Susan Kare a conçu certaines des premières icônes graphiques pour l’interface utilisateur du Macintosh, comme la corbeille, le pinceau, le chien de garde et le visage souriant (Happy Mac). Ces icônes étaient révolutionnaires à l’époque et rendaient les ordinateurs accessibles grâce à un langage visuel universel.</p>
+        </div>
+        
+        <div class="carte">
+            <h3>Police Chicago (1984)</h3>
+            <img src="Images/SK_chicago.jpg" alt="Police Chicago" class="image-oeuvre">
+            <p><strong>Entreprise :</strong> Apple</p>
+            <p>Cette police de caractères a été créée par Kare pour le Macintosh. Utilisée sur l’écran du premier iPod également, elle se distingue par sa lisibilité sur les écrans à faible résolution et devient un symbole du design numérique fonctionnel.</p>
+        </div>
+        
+        <div class="carte">
+            <h3>Cartes Solitaire (1990)</h3>
+            <img src="images/SK_solitaire.jpg" alt="Cartes Solitaire" class="image-oeuvre">
+            <p><strong>Entreprise :</strong> Microsoft</p>
+            <p>Susan Kare a aussi contribué au design d’icônes et de cartes pour Microsoft Windows, notamment les célèbres cartes du jeu Solitaire.</p>
+        </div>
+        
+        <div class="carte">
+            <h3>Émoticônes Facebook (2010)</h3>
+            <img src="Images/SK_facebook.jpg" alt="Émoticônes Facebook" class="image-oeuvre">
+            <p><strong>Entreprise :</strong> Facebook</p>
+            <p>Plus récemment, elle a travaillé avec Facebook pour créer une série d’émoticônes. Fidèle à son style, elle a su moderniser l’idée des premiers smileys numériques en conservant une approche minimaliste et universelle.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="a-propos">
+    <div class="section-container">
+        <h2>À propos</h2>
+        <p>Ce site a été conçu pour rendre hommage à l’incroyable parcours de Susan Kare, une femme qui a su marier les arts traditionnels et les nouvelles technologies pour révolutionner notre manière d’interagir avec les ordinateurs.</p>
+
+        <p>L’objectif de ce projet est double. D’une part, il vise à mettre en lumière une figure souvent méconnue du grand public, malgré l’importance de ses contributions. D’autre part, il aspire à inspirer les designers en herbe, les passionnés d’art numérique, et toute personne curieuse d’en apprendre davantage sur l’histoire du design graphique et de l’informatique.</p>
+        
+        <p>En explorant ce site, j'espère que vous découvrirez non seulement le travail remarquable de Susan Kare, mais également les valeurs qu’elle incarne : la recherche de la perfection dans les détails, l’harmonie entre esthétique et fonction, et la conviction que le design peut améliorer nos vies.</p>
+        
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        
+        <div class="footer-section">
+            <h2>Mes Sources</h2>
+            <ul>
+                <li><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></li>
+                <li><a href="https://kare.com/about/" target="_blank">Site officiel de Susan Kare (photos)</a></li>
+                <li><a href="https://www.imprimerie.lyon.fr/fr/susan-kare" target="_blank">Imprimerie de Lyon</a></li>
+                <li><a href="https://www.elle.fr/Loisirs/High-tech/News/Susan-Kare-le-parcours-de-cette-artiste-que-vous-connaissez-toutes-sans-le-savoir-4014730" target="_blank">Elle</a></li>
+                <li><a href="https://www.famousgraphicdesigners.org/susan-kare" target="_blank">Famous Graphic Designers</a></li>
+                <li><a href="https://www.creads.com/blog/creas/book-freelance/susan-kare-graphiste-icones-apple/" target="_blank">Creads</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/Susan_Kare" target="_blank">Wikipédia</a></li>
+                <li><a href="https://massotmarion.wixsite.com/website/post/culture-design-il-est-temps-d-asseoir-les-femmes-susan-kare-s02e46" target="_blank">Marion Massot</a></li>
+                <li><a href="https://www.frenchweb.fr/connaissez-vous-susan-kare-la-designer-qui-donna-le-sourire-au-macintosh/444481" target="_blank">FrenchWeb</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="footer-section">
+            <h2>Suivez-moi !</h2>
+            <ul>
+                <li><a href="https://github.com/insafal" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/insaf-a-a120a7259/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="footer-section">
+            <h2>Reçois chaque semaine une figure clé du design et de l'information !</h2>
+            <form>
+                <input type="email" name="email" placeholder="Entrez votre e-mail">
+                <button type="button">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+        <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a> | <a href="#">FAQ</a> | <a href="#">Contact</a></p>
+    </div>    
+    
+</footer>
